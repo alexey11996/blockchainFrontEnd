@@ -60,6 +60,11 @@ export default {
         text: "Публичный ключ"
       },
       {
+        to: "/changekeys",
+        icon: "mdi-key-change",
+        text: "Смена ключей"
+      },
+      {
         to: "/table-list",
         icon: "mdi-clipboard-outline",
         text: "Table List"

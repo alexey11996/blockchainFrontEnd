@@ -21,6 +21,11 @@ export default [
     view: "GetMyPublic"
   },
   {
+    path: "/changekeys",
+    name: "ChangeKeys",
+    view: "ChangeKeys"
+  },
+  {
     path: "/table-list",
     name: "Table List",
     view: "TableList"

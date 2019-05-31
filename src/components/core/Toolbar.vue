@@ -39,6 +39,8 @@ export default {
         this.title = "Регистрация нового пользователя";
       if (val.name == "GetMyPublic")
         this.title = "Получение публичного ключа пользователя";
+      if (val.name == "ChangeKeys")
+        this.title = "Смена текущей пары ключей пользователя";
     }
   },
 
