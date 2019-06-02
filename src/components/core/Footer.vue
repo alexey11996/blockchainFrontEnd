@@ -14,7 +14,7 @@ export default {
   data: () => ({
     links: [
       {
-        name: "BlockChain Github Repo",
+        name: "BlockChain Github Link",
         Link: "https://github.com/alexey11996/swagger_server"
       }
       // { name: "Creative Tim", Link: "https://www.creative-tim.com" },

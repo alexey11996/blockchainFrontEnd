@@ -41,6 +41,13 @@ export default {
         this.title = "Получение публичного ключа пользователя";
       if (val.name == "ChangeKeys")
         this.title = "Смена текущей пары ключей пользователя";
+      if (val.name == "IsDocTrue")
+        this.title = "Проверка подлинности документа";
+      if (val.name == "GetDate")
+        this.title = "Получение даты подписи документа";
+      if (val.name == "CheckSignatures")
+        this.title = "Проверка наличия всех подписей документа";
+      if (val.name == "CheckSign") this.title = "Проверка подлинности подписи";
     }
   },
 

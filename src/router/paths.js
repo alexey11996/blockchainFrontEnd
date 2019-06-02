@@ -26,16 +26,23 @@ export default [
     view: "ChangeKeys"
   },
   {
-    path: "/table-list",
-    name: "Table List",
-    view: "TableList"
+    path: "/isdoctrue",
+    name: "IsDocTrue",
+    view: "IsDocTrue"
   },
   {
-    path: "/typography",
-    view: "Typography"
+    path: "/getdate",
+    name: "GetDate",
+    view: "GetDate"
   },
   {
-    path: "/icons",
-    view: "Icons"
+    path: "/checksignatures",
+    name: "CheckSignatures",
+    view: "CheckSignatures"
+  },
+  {
+    path: "/checksign",
+    name: "CheckSign",
+    view: "CheckSign"
   }
 ];

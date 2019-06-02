@@ -13,7 +13,7 @@
 export default {
   metaInfo() {
     return {
-      title: "BC-Chain"
+      title: "DocChain"
     };
   }
 };

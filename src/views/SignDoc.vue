@@ -63,6 +63,14 @@ export default {
       emails: []
     };
   },
+  created: function() {
+    if (this.$route.query.emails != undefined) {
+      this.emails = this.$route.query.emails.split(",");
+      //console.log(this.emails);
+    } else {
+      console.log("empty emails");
+    }
+  },
   methods: {
     updateDocument(e) {
       if (e.target.files[0]) {

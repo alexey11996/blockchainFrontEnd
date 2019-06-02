@@ -15,7 +15,7 @@
           <v-list-tile-avatar color="white">
             <v-img :src="logo" height="34" contain/>
           </v-list-tile-avatar>
-          <v-list-tile-title class="title">BC-Chain</v-list-tile-title>
+          <v-list-tile-title class="title">DocChain</v-list-tile-title>
         </v-list-tile>
         <v-divider/>
         <v-list-tile
@@ -65,19 +65,24 @@ export default {
         text: "Смена ключей"
       },
       {
-        to: "/table-list",
-        icon: "mdi-clipboard-outline",
-        text: "Table List"
+        to: "/isdoctrue",
+        icon: "mdi-file-document",
+        text: "Подлинность документа"
       },
       {
-        to: "/typography",
-        icon: "mdi-format-font",
-        text: "Typography"
+        to: "/getdate",
+        icon: "mdi-calendar-clock",
+        text: "Дата подписи"
       },
       {
-        to: "/icons",
-        icon: "mdi-chart-bubble",
-        text: "Icons"
+        to: "/checksignatures",
+        icon: "mdi-account-check",
+        text: "Состав подписантов"
+      },
+      {
+        to: "/checksign",
+        icon: "mdi-verified",
+        text: "Подлинность подписи"
       }
     ],
     responsive: false

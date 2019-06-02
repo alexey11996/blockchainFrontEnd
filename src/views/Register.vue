@@ -119,7 +119,7 @@ export default {
             if (res.data.hasOwnProperty("msg")) {
               this.flashMessage.error({
                 title: "Что-то пошло не так",
-                message: "Введенная почта уже занята. Попробуйте ввести другую"
+                message: res.data.msg
               });
               this.emailSent = false;
             } else {

@@ -133,6 +133,7 @@ export default {
       });
 
       saveAs(blob, filename);
+      this.multiplePublicKeys = false;
     },
     getDateFromTimestamp(timestamp) {
       if (timestamp == "Получение при регистрации") {
