@@ -23,6 +23,7 @@
 
 <script>
 import axios from "axios";
+import config from "./config";
 import { saveAs } from "file-saver";
 export default {
   name: "ChangeKeys",
@@ -49,7 +50,7 @@ export default {
             document.getElementById("kfile").value = "";
           } else {
             axios
-              .post("http://localhost:3000/myroutes/changekeys", {
+              .post(`http://${config.HOST}/myroutes/changekeys`, {
                 privateKey: this.privateKey,
                 publicKey: this.publicKey
               })

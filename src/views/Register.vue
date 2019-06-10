@@ -78,6 +78,7 @@
 
 <script>
 import { saveAs } from "file-saver";
+import config from "./config";
 import axios from "axios";
 export default {
   name: "Register",
@@ -110,7 +111,7 @@ export default {
     onCodeChange() {
       if (this.code == this.enteredCode) {
         axios
-          .post("http://localhost:3000/myroutes/register", {
+          .post(`http://${config.HOST}/myroutes/register`, {
             mobilePhone: this.phone,
             email: this.email,
             fio: this.name
@@ -123,6 +124,7 @@ export default {
               });
               this.emailSent = false;
             } else {
+              localStorage.publicKey = res.data.publicKey;
               var content =
                 res.data.privateKey + "~12345~" + res.data.publicKey;
               var filename = "key.pem";
@@ -152,7 +154,7 @@ export default {
         .toString(36)
         .substring(2);
       axios
-        .post("http://localhost:3000/myroutes/sendcode", {
+        .post(`http://${config.HOST}/myroutes/sendcode`, {
           code: this.code,
           recipient: this.email
         })

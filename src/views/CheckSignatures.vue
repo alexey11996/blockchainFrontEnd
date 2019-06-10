@@ -5,7 +5,7 @@
       <v-flex xs12 md8>
         <material-card
           color="green"
-          title="Проверка наличия подписей для указанного документа"
+          title="Проверка наличия всех подписей для указанного документа"
           text="Заполните указанные поля"
         >
           <v-form>
@@ -26,6 +26,7 @@
 
 <script>
 import axios from "axios";
+import config from "./config";
 export default {
   name: "CheckSignatures",
   data() {
@@ -38,7 +39,7 @@ export default {
         bodyFormData.append("document", e.target.files[0]);
         axios
           .post(
-            "http://localhost:3000/myroutes/checksignatures",
+            `http://${config.HOST}/myroutes/checksignatures`,
             bodyFormData,
             {
               headers: { "Content-Type": "multipart/form-data" }

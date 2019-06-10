@@ -47,6 +47,7 @@
 
 <script>
 import axios from "axios";
+import config from "./config";
 export default {
   name: "IsDocTrue",
   data() {
@@ -76,7 +77,7 @@ export default {
       bodyFormData.set("email", this.email);
       bodyFormData.append("document", this.docFile);
       axios
-        .post("http://localhost:3000/myroutes/isdoctrue", bodyFormData, {
+        .post(`http://${config.HOST}/myroutes/isdoctrue`, bodyFormData, {
           headers: { "Content-Type": "multipart/form-data" }
         })
         .then(res => {

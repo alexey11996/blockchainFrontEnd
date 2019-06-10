@@ -51,6 +51,7 @@
 
 <script>
 import axios from "axios";
+import config from "./config";
 export default {
   name: "SignDoc",
   data() {
@@ -66,9 +67,6 @@ export default {
   created: function() {
     if (this.$route.query.emails != undefined) {
       this.emails = this.$route.query.emails.split(",");
-      //console.log(this.emails);
-    } else {
-      console.log("empty emails");
     }
   },
   methods: {
@@ -110,7 +108,7 @@ export default {
       bodyFormData.set("signers", this.emails.join());
       bodyFormData.append("document", this.docFile);
       axios
-        .post("http://localhost:3000/myroutes/signdoc", bodyFormData, {
+        .post(`http://${config.HOST}/myroutes/signdoc`, bodyFormData, {
           headers: { "Content-Type": "multipart/form-data" }
         })
         .then(res => {

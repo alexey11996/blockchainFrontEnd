@@ -59,6 +59,7 @@
 
 <script>
 import axios from "axios";
+import config from "./config";
 import { saveAs } from "file-saver";
 export default {
   name: "GetMyPublic",
@@ -91,7 +92,7 @@ export default {
     formSubmit(e) {
       e.preventDefault();
       axios
-        .post("http://localhost:3000/myroutes/getmypublic", {
+        .post(`http://${config.HOST}/myroutes/getmypublic`, {
           email: this.email
         })
         .then(res => {
@@ -115,12 +116,14 @@ export default {
             });
             this.email = "";
           } else if (res.data.hasOwnProperty("first_public_key")) {
+            console.log(res);
             this.keysArr[0] = res.data.first_public_key;
             var newPubs = JSON.parse(res.data.new_pubs);
             var timestamps = Object.keys(newPubs);
             var publicKeys = Object.values(newPubs);
             this.keysArr = this.keysArr.concat(publicKeys);
             this.items = this.items.concat(timestamps);
+            this.multiplePublicKeys = true;
           }
         });
     },
