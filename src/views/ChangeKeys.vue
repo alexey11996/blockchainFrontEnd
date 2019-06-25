@@ -61,6 +61,7 @@ export default {
                     message: res.data.msg
                   });
                 } else {
+                  //localStorage.publicKey = res.data.publicKey;
                   var content =
                     res.data.new_private + "~12345~" + res.data.new_public;
                   var filename = "key.pem";

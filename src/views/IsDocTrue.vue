@@ -88,6 +88,7 @@ export default {
             });
             this.email = "";
             document.getElementById("document").value = "";
+            this.validDocFile = false;
           } else {
             this.flashMessage.success({
               title: "Проверка завершена",
@@ -96,6 +97,7 @@ export default {
             });
             this.email = "";
             document.getElementById("document").value = "";
+            this.validDocFile = false;
           }
         });
     }
